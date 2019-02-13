@@ -1,14 +1,4 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -17,17 +7,83 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+  user-select: none;
 }
 
-.App-link {
-  color: #61dafb;
+h1, h2, h3, h4, h5 {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-wrapper {
+  min-height: 50vmin;
+  width: 80vmin;
+  display: flex;
+  flex-direction: column;
+  font-size: 2vmin;
+  border-radius: 20px;
+  border: 1px solid;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.term-wrapper {
+  height: 15%;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.definition-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid;
+}
+
+.slot-wrapper {
+  width: calc(2vmin + 70px);
+  height: 70%;
+  min-height: 60px;
+  padding: 0px 20px;
+  border: 1px dashed;
+  border-radius: 10px;
+  margin: 5px
+}
+
+.deck-wrapper {
+  height: 60%;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper {
+  width: calc(2vmin + 70px);
+  height: auto;
+  padding: 0px 20px;
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.card-wrapper p {
+  pointer-events: none;
+}
+
+.card-wrapper:hover {
+  cursor: grab;
+}
+
+.card-wrapper:active {
+  cursor: grabbing;
 }
