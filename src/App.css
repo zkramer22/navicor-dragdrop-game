@@ -9,6 +9,7 @@
   color: white;
   text-align: center;
   user-select: none;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -68,12 +69,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .card-wrapper {
+  position: relative;
   width: calc(2vmin + 70px);
   height: auto;
   padding: 0px 20px;
   margin: 10px;
   border: 1px solid;
   border-radius: 10px;
+  background-color: #282c34;
 }
 
 .card-wrapper p {

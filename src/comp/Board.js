@@ -11,22 +11,31 @@ class Board extends Component {
     this.state = {
       terms: TERMS,
       termIdx: 0,
-      cards: shuffler(CARDS)
+      cards: shuffler(CARDS),
+      completed: []
     };
 
     this.handleCardDrop = this.handleCardDrop.bind(this);
   }
 
-  handleCardDrop(card) {
-    console.log('handling');
+  componentDidMount() {
+    const { terms, termIdx } = this.state;
+    this.setState({ completed: terms[termIdx].completed });
+  }
+
+  handleCardDrop(word, slotRef) {
+    console.log(word, slotRef);
+    // console.log(this.state.completed);
+    // this.setState({ termIdx: ++this.state.termIdx });
   }
 
   render() {
-    const termIdx = this.state.termIdx,
-          termObj = this.state.terms[termIdx],
-          term    = termObj.term,
-          def     = termObj.def,
-          cards   = this.state.cards;
+    const termIdx   = this.state.termIdx,
+          termObj   = this.state.terms[termIdx],
+          term      = termObj.term,
+          def       = termObj.def,
+          completed = termObj.completed,
+          cards     = this.state.cards;
 
     return (
       <div className="board-wrapper">
@@ -37,7 +46,7 @@ class Board extends Component {
         <div className="definition-wrapper">
           { def.map((word, i) => {
               return (
-                <Slot key={ i } word={ word }/>
+                <Slot key={ i } word={ word } completed={ completed[i] }/>
               )
             })
           }
@@ -61,11 +70,3 @@ class Board extends Component {
 }
 
 export default Board;
-
-// return (
-//   <div className="board-wrapper">
-//   <Term term={ term } def={ def }/>
-//   <Definition def={ def }/>
-//   <Deck cards={ cards }/>
-//   </div>
-// );
