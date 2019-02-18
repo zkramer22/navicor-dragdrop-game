@@ -13,7 +13,7 @@ export const CARDS = [
   { word: "Your" },
   { word: "Information" },
   { word: "I" },
-  { word: "Don't" },
+  { word: "Dont" },
   { word: "Know" },
 ];
 

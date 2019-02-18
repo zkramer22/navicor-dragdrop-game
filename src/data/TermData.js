@@ -1,37 +1,37 @@
-export const TERMS = [
-  {
+export const TERMS = {
+  0: {
     term: "NHL",
     def: ["National", "Hockey", "League"],
-    completed: [false, false, false]
+    completed: { "National": false, "Hockey": false, "League": false }
   },
-  {
+  1: {
     term: "MLB",
     def: ["Major", "League", "Baseball"],
-    completed: [false, false, false]
+    completed: { "Major": false, "League": false, "Baseball": false }
   },
-  {
+  2: {
     term: "NFL",
     def: ["National", "Football", "League"],
-    completed: [false, false, false]
+    completed: { "National": false, "Football": false, "League": false }
   },
-  {
+  3: {
     term: "MLS",
     def: ["Major", "League", "Soccer"],
-    completed: [false, false, false]
+    completed: { "Major": false, "League": false, "Soccer": false }
   },
-  {
+  4: {
     term: "LOL",
     def: ["Laugh", "Out", "Loud"],
-    completed: [false, false, false]
+    completed: { "Laugh": false, "Out": false, "Loud": false }
   },
-  {
+  5: {
     term: "FYI",
     def: ["For", "Your", "Information"],
-    completed: [false, false, false]
+    completed: { "For": false, "Your": false, "Information": false }
   },
-  {
+  6: {
     term: "IDK",
-    def: ["I", "Don't", "Know"],
-    completed: [false, false, false]
+    def: ["I", "Dont", "Know"],
+    completed: { "I": false, "Dont": false, "Know": false }
   },
-];
+};
