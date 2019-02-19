@@ -34,4 +34,9 @@ export const TERMS = {
     def: ["I", "Dont", "Know"],
     completed: { "I": false, "Dont": false, "Know": false }
   },
+  7: {
+    term: "YOLO",
+    def: ["You", "Only", "Live", "Once"],
+    completed: { "You": false, "Only": false, "Live": false, "Once": false }
+  }
 };

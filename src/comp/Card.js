@@ -76,6 +76,7 @@ class Card extends Component {
 
           this.setState({
             controlledPosition: { x: newX, y: newY },
+            pointerEvents: 'none',
             border: '1px solid lightgreen'
           });
 

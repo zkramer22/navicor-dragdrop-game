@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .definition-wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +47,14 @@ h1, h2, h3, h4, h5 {
   border-bottom: 1px solid;
 }
 
+#score-animation-wrapper {
+  position: absolute;
+  right: 15%;
+  transition: bottom 1s linear, opacity .35s linear;
+  color: lightgreen;
+  transform: rotate(5deg);
+}
+
 .slot-wrapper {
   width: calc(2vmin + 70px);
   height: 70%;
@@ -53,7 +62,7 @@ h1, h2, h3, h4, h5 {
   padding: 0px 20px;
   border: 1px dashed;
   border-radius: 10px;
-  margin: 5px
+  margin: 5px;
 }
 
 .deck-wrapper {
@@ -78,18 +87,6 @@ h1, h2, h3, h4, h5 {
   transition: initial;
 }
 
-.wrong-card {
-  border: 1px solid red;
-}
-
-.dropping {
-  transition: transform .3s ease, border .1s linear;
-}
-
-.completed {
-  border: 1px solid lightgreen;
-}
-
 .card-wrapper p {
   pointer-events: none;
 }
@@ -100,4 +97,10 @@ h1, h2, h3, h4, h5 {
 
 .card-wrapper:active {
   cursor: grabbing;
+}
+
+.lives {
+  max-width: 50px;
+  height: auto;
+  margin: 11px;
 }
