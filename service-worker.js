@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/navicor-dragdrop-game/precache-manifest.b41233600c2da591ae2b921e01b0a16d.js"
+  "/navicor-dragdrop-game/precache-manifest.9312335792f05871c8636f06c253a131.js"
 );
 
 workbox.clientsClaim();
