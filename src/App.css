@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .term-wrapper {
-  height: 15%;
+  /* height: 15%; */
   width: 100%;
   padding: 10px 0px;
   display: flex;
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25%;
+  /* height: 25%; */
   width: 100%;
   padding: 10px 0px;
   border-bottom: 1px solid;
@@ -49,24 +49,24 @@ h1, h2, h3, h4, h5 {
 
 #score-animation-wrapper {
   position: absolute;
-  right: 15%;
+  right: 5%;
   transition: bottom 1s linear, opacity .35s linear;
   color: lightgreen;
   transform: rotate(5deg);
 }
 
 .slot-wrapper {
-  width: calc(2vmin + 70px);
-  height: 70%;
-  min-height: 60px;
-  padding: 0px 20px;
+  width: calc(25% - 42px);
+  /* height: 70%; */
+  height: 60px;
+  padding: 0px 10px;
   border: 1px dashed;
   border-radius: 10px;
-  margin: 5px;
+  margin: 10px;
 }
 
 .deck-wrapper {
-  height: 60%;
+  /* height: 60%; */
   width: 100%;
   padding: 10px 0px;
   display: flex;
@@ -77,9 +77,12 @@ h1, h2, h3, h4, h5 {
 
 .card-wrapper {
   position: relative;
-  width: calc(2vmin + 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(25% - 42px);
   height: 60px;
-  padding: 0px 20px;
+  padding: 0px 10px;
   margin: 10px;
   border: 1px solid;
   border-radius: 10px;

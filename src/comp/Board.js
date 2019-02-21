@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Slot from './Slot.js';
 import Card from './Card.js';
-import lifeImg from '../img/life.png';
-import lifeLostImg from '../img/life-lost.png';
 
 import { CARDS, shuffler } from '../data/CardData.js';
 import { TERMS } from '../data/TermData.js';
@@ -15,49 +13,11 @@ class Board extends Component {
       termIdx: 0,
       cards: shuffler(CARDS[0]),
       cardCheck: [],
-      score: 0,
       scoreOpacity: '0',
       scoreBottom: '30%',
-      lives: 3,
-      timer: 15,
-      defaultTimer: 15,
-      countdown: null
     };
 
     this.handleCardDrop = this.handleCardDrop.bind(this);
-  }
-
-  componentDidMount() {
-    // setTimeout(() => this.countDown(), 2000);
-  }
-
-  restartTimer(sec) {
-    this.stopTimer();
-    if (sec) {
-      this.setState({ timer: sec })
-    }
-    else {
-      this.setState({ timer: 15 });
-    }
-    this.countDown();
-  }
-
-  tickTimer() {
-    if (this.state.timer > 1) {
-      this.setState({ timer: this.state.timer - 1 });
-    }
-    else {
-      this.setState({ lives: this.state.lives - 1 });
-      this.restartTimer(this.state.defaultTimer);
-    }
-  }
-
-  countDown() {
-    this.setState({ countdown: setInterval(() => this.tickTimer(), 1000) });
-  }
-
-  stopTimer() {
-    clearInterval(this.state.countdown);
   }
 
   scoreIndicator() {
@@ -66,22 +26,33 @@ class Board extends Component {
   }
 
   updateScore(val) {
+    this.props.handleScore(val);
     this.setState({
-      score: this.state.score + val,
-      defaultTimer: this.state.defaultTimer - 1,
       scoreOpacity: '1',
       scoreBottom: '40%'
     });
     this.scoreIndicator();
-    this.restartTimer(this.state.defaultTimer);
   }
 
   nextTerm() {
     const { termIdx } = this.state;
-    this.setState({
-      termIdx: this.state.termIdx + 1,
-      cards: shuffler(CARDS[termIdx + 1])
-    });
+    if (termIdx < Object.values(TERMS).length - 1) {
+      this.setState({
+        termIdx: this.state.termIdx + 1,
+        cards: shuffler(CARDS[termIdx + 1])
+      });
+    }
+    else {
+      this.setState({
+        termIdx: 0,
+        cards: shuffler(CARDS[0])
+      });
+      this.resetTerms();
+    }
+  }
+
+  resetTerms() {
+    console.log('reset them bishes');
   }
 
   returnCards(cardCheck) {
@@ -110,22 +81,11 @@ class Board extends Component {
   }
 
   render() {
-    const { cards, termIdx, score, scoreBottom, scoreOpacity, timer, lives } = this.state;
+    const { cards, termIdx, scoreBottom, scoreOpacity } = this.state;
 
     const termObj   = this.state.terms[termIdx],
           term      = termObj.term,
           def       = termObj.def;
-
-
-    let livesArr = [];
-    for (let i = 0; i < 3; i++) {
-      if (lives > i) {
-        livesArr.push(true)
-      }
-      else {
-        livesArr.push(false)
-      }
-    }
 
     return (
       <div className="board-wrapper">
@@ -153,30 +113,6 @@ class Board extends Component {
                       key={ i }
                       word={ card.word } />
               )
-            })
-          }
-        </div>
-
-        <div className="score-wrapper">
-          <h3>score :: { score }</h3>
-        </div>
-
-        <div className="timer-wrapper">
-          <h3>timer :: { timer }</h3>
-        </div>
-
-        <div className="lives-wrapper">
-          { livesArr.map((life, i) => {
-              if (life) {
-                return (
-                  <img className="lives" alt="life" key={ i } src={ lifeImg }/>
-                )
-              }
-              else {
-                return (
-                  <img className="lives" alt="lifeLost" key={ i } src={ lifeLostImg }/>
-                )
-              }
             })
           }
         </div>
