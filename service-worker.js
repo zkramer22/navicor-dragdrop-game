@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/navicor-dragdrop-game/precache-manifest.9312335792f05871c8636f06c253a131.js"
+  "/dragdrop-game/precache-manifest.519d67710ff3d14f230a5648a1f2cf12.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/navicor-dragdrop-game/index.html", {
+workbox.routing.registerNavigationRoute("/dragdrop-game/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

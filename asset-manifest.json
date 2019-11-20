@@ -1,15 +1,15 @@
 {
-  "main.css": "/navicor-dragdrop-game/static/css/main.af8ccf5c.chunk.css",
-  "main.js": "/navicor-dragdrop-game/static/js/main.1b2ef6a9.chunk.js",
-  "main.js.map": "/navicor-dragdrop-game/static/js/main.1b2ef6a9.chunk.js.map",
-  "runtime~main.js": "/navicor-dragdrop-game/static/js/runtime~main.23004ccb.js",
-  "runtime~main.js.map": "/navicor-dragdrop-game/static/js/runtime~main.23004ccb.js.map",
-  "static/js/2.e5c29ef9.chunk.js": "/navicor-dragdrop-game/static/js/2.e5c29ef9.chunk.js",
-  "static/js/2.e5c29ef9.chunk.js.map": "/navicor-dragdrop-game/static/js/2.e5c29ef9.chunk.js.map",
-  "index.html": "/navicor-dragdrop-game/index.html",
-  "precache-manifest.9312335792f05871c8636f06c253a131.js": "/navicor-dragdrop-game/precache-manifest.9312335792f05871c8636f06c253a131.js",
-  "service-worker.js": "/navicor-dragdrop-game/service-worker.js",
-  "static/css/main.af8ccf5c.chunk.css.map": "/navicor-dragdrop-game/static/css/main.af8ccf5c.chunk.css.map",
-  "static/media/life-lost.png": "/navicor-dragdrop-game/static/media/life-lost.88b70847.png",
-  "static/media/life.png": "/navicor-dragdrop-game/static/media/life.16f15c24.png"
+  "main.css": "/dragdrop-game/static/css/main.e84416d0.chunk.css",
+  "main.js": "/dragdrop-game/static/js/main.1cc12c34.chunk.js",
+  "main.js.map": "/dragdrop-game/static/js/main.1cc12c34.chunk.js.map",
+  "runtime~main.js": "/dragdrop-game/static/js/runtime~main.7d377836.js",
+  "runtime~main.js.map": "/dragdrop-game/static/js/runtime~main.7d377836.js.map",
+  "static/js/2.7b238846.chunk.js": "/dragdrop-game/static/js/2.7b238846.chunk.js",
+  "static/js/2.7b238846.chunk.js.map": "/dragdrop-game/static/js/2.7b238846.chunk.js.map",
+  "index.html": "/dragdrop-game/index.html",
+  "precache-manifest.519d67710ff3d14f230a5648a1f2cf12.js": "/dragdrop-game/precache-manifest.519d67710ff3d14f230a5648a1f2cf12.js",
+  "service-worker.js": "/dragdrop-game/service-worker.js",
+  "static/css/main.e84416d0.chunk.css.map": "/dragdrop-game/static/css/main.e84416d0.chunk.css.map",
+  "static/media/life-lost.png": "/dragdrop-game/static/media/life-lost.88b70847.png",
+  "static/media/life.png": "/dragdrop-game/static/media/life.16f15c24.png"
 }
